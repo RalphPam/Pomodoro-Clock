@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  color: black;
+  font-family: 'Zilla Slab', serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0ece4;
+}
+
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: name 1s ease-out forwards;
+}
+
+.control {
+  display: flex;
+}
+
+.clock {
+  text-align: center;
+  margin-top: 35px;
+  width: 370px;
+}
+
+time {
+  background-color: #ea5454c7;
+  display: block;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 20px;
+  padding-top: 10px;
+  font-size: 70px;
+  width: 300px;
+}
+
+.clock-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+i {
+  font-size: 50px;
+}
+
+.break-control {
+  padding-right: 20px;
+  text-align: center;
+}
+
+.control label {
+  font-size: 40px;
+  padding: 0 10px;
+  display: inline-block;
+  width: 50px;
+}
+
+.session-control {
+  padding-left: 20px;
+  text-align: center;
+}
+
+.description {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.description-ani {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 30px;
+  animation: descAnimation 0.8s ease-out forwards;
+}
+
+@keyframes descAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0,0)
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1,1)
+  }
+}
+
+.reset {
+  animation: reset 0.3s linear forwards;
+}
+
+@keyframes reset {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.increment {
+  animation: increment 0.1s linear forwards;
+}
+
+@keyframes increment {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.decrement {
+  animation: decrement 0.1s linear forwards;
+}
+
+@keyframes decrement {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.toggle {
+  animation: toggle 0.1s linear forwards;
+}
+
+@keyframes toggle {
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1.05,1.05);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@media (max-width: 400px) {
+  .session-control {
+    padding-left: 5px;
+  }
+  .break-control {
+    padding-right: 5px;
+  }
+  .clock-btn {
+    margin-top: -15px;
+  }
+}
+
+.designer {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+@keyframes name {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
